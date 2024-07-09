@@ -18,7 +18,7 @@ export function CartItem({
   const price = formatPrice((product.price / 100) * product.quantity)
 
   return (
-    <div className="flex flex-1 items-center justify-around sm:gap-2">
+    <div className="flex flex-1 items-center justify-between sm:justify-around sm:gap-2">
       <div className="relative h-16 w-16">
         <Image 
           src={product.image}
@@ -28,7 +28,7 @@ export function CartItem({
         />
       </div>
 
-      <div className="flex-">
+      <div className="mr-2">
         <div className="flex items-center justify-between">
           <span className="text-sm font-semibold">{product.name}</span>
           <span className="text-sm text-zinc-500">{price}</span>
